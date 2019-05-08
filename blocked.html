@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Security error</title>
+</head>
+<style>
+    body {
+        background-color: #CE3426;
+        color: #fff;
+        font-family: Helvetica,Arial,sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        padding-top: 100px;
+    }
+    #wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    #container {
+        width: 600px;
+        margin: 0 auto;
+    }
+    #icon {
+        background-image: url(/images/blocked.png);
+        width: 64px;
+        height: 64px;
+    }
+    h3 {
+        font-size: 1.5em;
+        font-weight: 400;
+    }
+    p {
+        line-height: 1.5em;
+    }
+
+</style>
+<body>
+    <div id="wrapper">
+        <div id="container">
+            <div id="icon"></div>
+            <h3>The site ahead contains harmful programs</h3>
+            <p>Attackers on the page <strong id="url"></strong> that you has just click might attempt to trick you into installing programs that harm your browsing experience (for example, by changing your homepage or showing extra ads on sites you visit).</p>
+            <p>Because you are using <strong>Chrome Protector</strong>, this site has been blocked to keep you safe!</p>
+        </div>
+    </div>
+</body>
+<script src="blocked.js"></script>
+</html>

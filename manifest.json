@@ -1,0 +1,40 @@
+{
+  "name": "Chrome Protector",
+  "description": "Malicious web detection",
+  "version": "1.0",
+  "manifest_version": 2,
+  "author": "KhanhNguyen",
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches":[
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "all_frames": true,
+      "run_at": "document_start"
+    }
+  ],
+  "browser_action": {
+    "default_title": "Exam24h Helper",
+    "default_icon": "images/shield.png",
+    "default_popup": "popup.html"
+  },
+  "icons":{
+    "16":"images/shield.png",
+    "48":"images/shield.png",
+    "128":"images/shield.png"
+  },
+  "web_accessible_resources":[
+    "images/shield.png"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "permissions": ["tabs"]
+}
